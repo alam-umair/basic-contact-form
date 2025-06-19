@@ -41,7 +41,7 @@ body {
 .form-container {
   position: absolute;
   background-color: hsl(0, 0%, 100%);
-  width: 40vw;
+  width: 50vw;
   height: max-content;
   border-radius: 15px;
   padding: 5rem 4rem;

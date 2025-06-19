@@ -1,0 +1,14 @@
+1. desktop-design -- complete
+2. desktop-preview WIP -- 
+	a. green asterisk after label.
+	b. asterisk should change color if input is invalid.
+	c. change input text color.
+3. error-state complete
+4. focus-and-active-state -- complete
+5. hover-start -- complete
+6. mobile-design -- complete
+7. success-state -- complete
+
+
+
+

@@ -31,21 +31,22 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: max-content;
   flex-direction: column;
   font-size: 2rem;
   color: hsl(187, 24%, 22%);
   font-family: "Karla-regular", sans-serif;
+  overflow: auto;
 }
 .form-container {
-  position: relative;
+  position: absolute;
   background-color: hsl(0, 0%, 100%);
   width: 40vw;
-  /* height: 77vh; */
-  height: auto;
-  margin: 0 auto;
+  height: max-content;
   border-radius: 15px;
   padding: 5rem 4rem;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 .form-container__heading {
   color: hsl(187, 24%, 22%);
@@ -61,7 +62,7 @@ body {
   border: none;
   border-radius: 1rem;
   font-family: "Karla-regular", sans-serif;
-  font-size: 2rem;
+  font-size: inherit;
 }
 
 .form-row {
@@ -85,7 +86,6 @@ textarea {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin-right: 1.5rem;
   transform: scale(1.5);
   accent-color: hsl(169, 82%, 27%);
 }
@@ -98,9 +98,9 @@ textarea {
   color: hsl(187, 24%, 22%);
 }
 label {
-  font-size: 2rem;
-  display: block;
+  display: flex;
   margin-bottom: 1.5rem;
+  gap: 1.5rem;
 }
 .radio-group {
   display: flex;
@@ -123,7 +123,10 @@ label {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-
+.checkbox-group {
+  display: flex;
+  gap: 1.5rem;
+}
 /* error message */
 .errFname,
 .errLname,
@@ -151,6 +154,10 @@ label {
   transition: opacity 0.3s ease-in-out;
   flex-direction: column;
 }
+.heading-logo {
+  display: flex;
+  gap: 1.4rem;
+}
 .message-container__heading {
   color: hsl(0, 0%, 100%);
   font-family: "Karla-bold", sans-serif;
@@ -171,7 +178,10 @@ label {
   border: none;
   border-radius: 0.5rem;
 }
-
+.radio.selected {
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
 /* footer */
 .attribution {
   font-family: "Karla", sans-serif;
@@ -179,4 +189,43 @@ label {
   position: absolute;
   bottom: 20px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 1.7rem;
+  }
+  .form-container {
+    position: relative;
+    width: 90vw;
+    padding: 2rem;
+    margin: 3rem auto;
+    top: 0%;
+    transform: translate(0%, 0%);
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .radio-group {
+    flex-direction: column;
+  }
+  textarea {
+    height: 24rem;
+  }
+  /* footer */
+  .attribution {
+    display: none;
+  }
+  /* popup container */
+  .message-container {
+    width: 90vw;
+    top: 3rem;
+    padding: 3rem 2rem;
+  }
+  .message-container__heading {
+    font-size: 2rem;
+  }
+  .message-container__text {
+    font-size: 1.7rem;
+    margin: 1.2rem 0rem 2.8rem 0rem;
+  }
 }

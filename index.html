@@ -18,7 +18,11 @@
   <body>
     <div class="form-container">
       <h1 class="form-container__heading">Contact Us</h1>
-      <form class="contact-form" action="" method="post">
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mwpbqzba"
+        method="POST"
+      >
         <div class="form-row">
           <div class="form-group">
             <label for="first-name">First Name</label>
@@ -27,15 +31,9 @@
               name="first-name"
               id="first-name"
               placeholder="e.g. John"
-              autocomplete="off"
               autofocus
-              aria-describedby="errFname"
             />
-            <span
-              class="errFname"
-              role="alert"
-              id="errFname"
-              aria-live="assertive"
+            <span class="errFname" role="alert" id="errFname"
               >This field is required</span
             >
           </div>
@@ -95,8 +93,10 @@
         </div>
         <div class="form-row">
           <div class="form-consent">
-            <input type="checkbox" id="checkbox" />
-            <span>I consent to being contacted by the team</span>
+            <div class="checkbox-group">
+              <input type="checkbox" id="checkbox" name="consent" />
+              <p>I consent to being contacted by the team</p>
+            </div>
             <span class="errConsent"
               >To submit this form, please consent to being contacted</span
             >
@@ -107,7 +107,15 @@
     </div>
 
     <div class="message-container">
-      <h2 class="message-container__heading">Message Sent!</h2>
+      <div class="heading-logo">
+        <img
+          src="./assets/images/icon-success-check.svg"
+          alt="check-icon"
+          class="logo_heading"
+        />
+        <h2 class="message-container__heading">Message Sent!</h2>
+      </div>
+
       <p class="message-container__text">
         Thanks for completing the form. We'll be in touch soon!
       </p>

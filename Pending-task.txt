@@ -8,7 +8,3 @@
 5. hover-start -- complete
 6. mobile-design -- complete
 7. success-state -- complete
-
-
-
-
